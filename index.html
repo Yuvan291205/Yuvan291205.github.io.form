@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Form</title>
+</head>
+<body>
+    <h2>Pet Adoption Form</h2>
+    <form action="/submit_adoption_form" method="post">
+        <!-- Personal Information Section -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            
+            <label for="address">Home Address:</label><br>
+            <input type="text" id="address" name="address" required><br><br>
+        </fieldset>
+        
+        <!-- Pet Information Section -->
+        <fieldset>
+            <legend>Pet Information</legend>
+            <label for="petname">Pet Name (if known):</label><br>
+            <input type="text" id="petname" name="petname"><br><br>
+            
+            <label for="pettype">Type of Pet:</label><br>
+            <select id="pettype" name="pettype" required>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="rabbit">Rabbit</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            
+            <label for="reason">Why do you want to adopt this pet?</label><br>
+            <textarea id="reason" name="reason" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+        
+        <!-- Living Situation Section -->
+        <fieldset>
+            <legend>Living Situation</legend>
+            <label for="housing">Do you live in a:</label><br>
+            <select id="housing" name="housing" required>
+                <option value="house">House</option>
+                <option value="apartment">Apartment</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            
+            <label for="yard">Do you have a yard?</label><br>
+            <input type="radio" id="yard_yes" name="yard" value="yes" required>
+            <label for="yard_yes">Yes</label><br>
+            <input type="radio" id="yard_no" name="yard" value="no">
+            <label for="yard_no">No</label><br><br>
+            
+            <label for="pets">Do you currently have any other pets?</label><br>
+            <input type="radio" id="pets_yes" name="pets" value="yes" required>
+            <label for="pets_yes">Yes</label><br>
+            <input type="radio" id="pets_no" name="pets" value="no">
+            <label for="pets_no">No</label><br><br>
+            
+            <label for="children">Do you have children?</label><br>
+            <input type="radio" id="children_yes" name="children" value="yes" required>
+            <label for="children_yes">Yes</label><br>
+            <input type="radio" id="children_no" name="children" value="no">
+            <label for="children_no">No</label><br><br>
+        </fieldset>
+        
+        <!-- Agreement Section -->
+        <fieldset>
+            <legend>Agreement</legend>
+            <input type="checkbox" id="agreement" name="agreement" required>
+            <label for="agreement">I agree to provide a loving and safe home for this pet and understand the responsibilities of pet ownership.</label><br><br>
+        </fieldset>
+        
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+    </form>
+</body>
+</html>
